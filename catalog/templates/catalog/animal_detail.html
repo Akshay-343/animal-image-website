@@ -1,0 +1,11 @@
+{% extends "catalog/base.html" %}
+{% block content %}
+    <div class="animallist" style="padding-left: 50px;">
+    <p><strong>Animal Name</strong> <a href="">{{ animal.animal_name }}</a></p>
+    <div>
+    {% if animal.animal_image %}
+    <img src="{{ animal.animal_image.url }}">
+    {% endif %}
+ </div>
+{% endblock %}
+</div>

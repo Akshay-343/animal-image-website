@@ -1,0 +1,14 @@
+{% extends "catalog/base.html" %}
+
+{% block content %}
+<h1>My Posts</h1>
+<ul>
+{% for animal in object_list %}
+    <li>
+        <a href="{{ animal.get_absolute_url }}">{{ animal.animal_name }}</a>
+    </li>
+{% empty %}
+    <li>No posts found.</li>
+{% endfor %}
+</ul>
+{% endblock %}
